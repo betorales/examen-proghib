@@ -1,0 +1,7 @@
+{
+  "name": "examen-proghib",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

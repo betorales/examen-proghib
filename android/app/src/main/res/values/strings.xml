@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">examen-proghib</string>
+    <string name="title_activity_main">examen-proghib</string>
+    <string name="package_name">examen.proghib</string>
+    <string name="custom_url_scheme">examen.proghib</string>
+</resources>

@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" [routerLink]="['']">
+      <ion-icon name="arrow-back" style="font-size: 30px;"></ion-icon>
+    </ion-button>
+    <ion-title>
+      Agregar publicación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="adding-ads-container" >
+    <!-- Inicio del form -->
+    <form #addAdsForm="ngForm" ngSubmit="addNewAd()">
+      <!-- Title -->
+      <ion-label>Título</ion-label>
+      <ion-input 
+      name="title" 
+      fill="solid" 
+      minlength="5"
+      type="text"
+      [(ngModel)]="adsData.title"
+      #titleInput="ngModel"
+      required>
+      </ion-input>
+      <div *ngIf="titleInput.invalid && titleInput.touched">
+        <ion-text color="danger">El título debe tener mínimo 5 caracteres</ion-text>
+      </div>
+      <!-- Add photo -->
+      <!-- 
+        Do not forget to link the image 
+        to the form 
+       -->
+      <div class="photo-container">
+        <ion-button (click)="openCamera()">
+          <ion-icon 
+          name="camera-outline" 
+          style="padding-right: 5px;">
+          </ion-icon>
+          Fotografía
+        </ion-button>
+        <div 
+        id="displayImageTaken" 
+        style="width: 150px; height: 150px; border: 1px solid gray;"></div>
+      </div>
+      <!-- Description -->
+      <ion-label>Descripción</ion-label>
+      <ion-input 
+      name="description" 
+      fill="solid" 
+      minlength="20"  
+      type="text"
+      [(ngModel)]="adsData.description"
+      #descriptionInput="ngModel"
+      required>
+      </ion-input>
+      <div *ngIf="descriptionInput.invalid && descriptionInput.touched">
+        <ion-text color="danger">La descripción debe contener mínimo 20 caracteres</ion-text>
+      </div>
+      <!-- Submit button -->
+      <ion-button 
+      [routerLink]="['']" 
+      [disabled]="!addAdsForm.valid" 
+      (click)="addNewAd()">
+        <ion-icon 
+        name="save-outline" 
+        style="padding-right: 5px;">
+        </ion-icon>
+        GUARDAR
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-content>
+  <h2>NO PERSISTENCIA DE DATOS - <strong>SOLO PRUEBA DE UI</strong></h2>
+  <div *ngFor="let ads of data" class="ad-container">
+    <ion-list>
+      <ion-item>
+        <div class="info-container">
+          <ion-img 
+          [src]="ads.image">
+        </ion-img>
+        <h2>{{ads.title}}</h2>
+        <p>{{ads.date | date:'longDate':'es'}}</p>
+        <ion-button>
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+  <h2>PERSISTENCIA DE DATOS</h2>
+  <div *ngFor="let ad of ads()" class="ad-container">
+    <ion-list>
+      <ion-item>
+        <div class="info-container">
+          <ion-img 
+          [src]="ad.imageRoute">
+        </ion-img>
+        <!-- Insertar title - DB-->
+        <h2>{{ad.title}}</h2>
+        <!-- insertar fecha de creación - DB -->
+        <p></p>
+        <ion-button>
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

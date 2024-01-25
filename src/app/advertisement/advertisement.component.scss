@@ -1,0 +1,16 @@
+.ad-container{
+    display: flex;
+}
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //width: 100%;
+    >ion-img{
+        height: 150px;
+        width: 150px;
+        object-fit: fill;
+        border: 1px solid black;
+    }
+}

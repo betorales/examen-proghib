@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IonicModule}from '@ionic/angular'
+import {IonicModule, ModalController}from '@ionic/angular'
+import { AdsDatabaseService } from 'src/app/services/ads-database.service';
 
 @Component({
   selector: 'app-deletemodal',
@@ -10,8 +11,19 @@ import {IonicModule}from '@ionic/angular'
 })
 export class DeletemodalComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl:ModalController, private database:AdsDatabaseService) { }
 
   ngOnInit() {}
+
+  cancel(){
+    console.log("Dismiss")
+    return this.modalCtrl.dismiss(null, 'Cancelar')
+  }
+
+  accept(){
+    console.log("Accept")
+    this.database.deleteAdById
+    return this.modalCtrl.dismiss(null, 'Confirmar')
+  }
 
 }

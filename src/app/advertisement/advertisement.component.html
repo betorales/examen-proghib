@@ -1,6 +1,6 @@
 <ion-content class="ion-padding">
-  <!-- NO PERSISTENCIA DE DATOS - SOLO PRUEBA DE UI -->
-  <!-- <div *ngFor="let ads of data" class="ad-container">
+  NO PERSISTENCIA DE DATOS - SOLO PRUEBA DE UI
+  <div *ngFor="let ads of data" class="ad-container">
     <ion-list>
       <ion-item>
         <div class="info-container">
@@ -9,14 +9,14 @@
         </ion-img>
         <h2>{{ads.title}}</h2>
         <p>{{ads.date | date:'longDate':'es'}}</p>
-        <ion-button>
+        <ion-button (click)="presentModal()">
           <ion-icon name="trash-outline"></ion-icon>
         </ion-button>
         </div>
       </ion-item>
     </ion-list>
-  </div> -->
-  <!-- PERSISTENCIA DE DATOS -->
+  </div>
+  PERSISTENCIA DE DATOS
   <div *ngFor="let ad of ads()" class="ad-container">
     <ion-list>
       <ion-item>

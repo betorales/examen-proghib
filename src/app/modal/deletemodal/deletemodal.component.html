@@ -1,6 +1,16 @@
-<ion-modal
->
-  <ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()" color="danger">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-title>Confirmar eliminación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="accept()">Confirmar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  </ion-content>
-</ion-modal>
+
+<ion-content>
+  <p>¿Confirma la eliminación de la publicación seleccionada?</p>
+</ion-content>

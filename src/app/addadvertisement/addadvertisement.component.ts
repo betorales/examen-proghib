@@ -83,9 +83,7 @@ export class AddadvertisementComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
-    
-  }
+  ngAfterViewInit() {}
 
   ngOnInit() {}
 
